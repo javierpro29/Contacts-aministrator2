@@ -20,7 +20,7 @@
     --primary-color-light: #3c3a3a;
     --toggle-color: #fff;
     --text-color: #ccc;
-    --bottoms-color: #FFC312;
+    --bottoms-color: #FFC107;
 
     --tran-05: all 0.3s ease;
 }
@@ -124,7 +124,7 @@ header .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
-    color: #FFC312;
+    color: var(--bottoms-color);
     text-align: center;
 }
 
@@ -191,7 +191,7 @@ header .image-text .profession{
 }
 
 .sidebar li a:hover{
-    background-color: #FFC312;
+    background-color: var(--bottoms-color);
 }
 
 .sidebar li a:hover .icon,
@@ -200,7 +200,7 @@ header .image-text .profession{
 }
 
 .bottom-content li{
-    background-color: #FFC312;
+    background-color: var(--bottoms-color);
     border-radius: 6px;
 }
 
@@ -260,7 +260,3 @@ header .image-text .profession{
     border: 1px solid black;
 }
 
-.btn-addcontacts:active{
-    background-color: var(--bottoms-color);
-    color: var(--body-color);
-}

@@ -12,7 +12,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth()
-const db = firebase.database().ref("contacts");
+const db = firebase.database().ref("contactsbook");
 
 export{auth};
 export{db};
