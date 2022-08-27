@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3c3a3a;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+    --bottoms-color: #FFC312;
+
+    --tran-05: all 0.3s ease;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: var(--body-color);
+}
+
+
+
+
+/* ===== Sidebar ===== */
+ .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+}
+.sidebar.close{
+    width: 88px;
+    opacity: 1;
+}
+
+
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .btn-logout .text,
+.sidebar .btn-logout .icon{
+    color: var(--body-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text{
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text{
+    opacity: 0;
+}
+/* =========================== */
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar header .logo-text span{
+    font-size: 1.2em;
+}
+
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFC312;
+    text-align: center;
+}
+
+header .image-text .profession{
+    font-size: 16px;
+    margin-top: -14px;
+    display: block;
+    text-align: center;
+}
+
+
+.sidebar header .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img{
+    width: 60px;
+}
+
+
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background: var(--body-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+
+
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+    margin-top: 40px;
+}
+
+
+.sidebar li a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover{
+    background-color: #FFC312;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+
+.bottom-content li{
+    background-color: #FFC312;
+    border-radius: 6px;
+}
+
+
+
+
+.sidebar .menu-bar{
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+
+}
+
+
+.menu-bar::-webkit-scrollbar{
+    display: none;
+}
+
+
+.home{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    /* width: calc(100% - 250px); */
+    background-color: white;
+    transition: var(--tran-05);
+    height: 100vh;
+    width:  calc(100% - 250px);
+}
+
+.home__title{
+    font-size: 2em;
+    font-weight: bold;
+    position: fixed;
+}
+
+.home .text{
+    font-weight: 500;
+    padding: 12px 60px;
+}
+
+.sidebar.close ~ .home{
+    left: 78px;
+    width: calc(100%);
+}
+
+
+.btn-addcontacts{
+    background: var(--bottoms-color);
+}
+
+.btn-addcontacts:hover{
+    background-color: var(--bottoms-color);
+    color: var(--body-color);
+    border: 1px solid black;
+}
+
+.btn-addcontacts:active{
+    background-color: var(--bottoms-color);
+    color: var(--body-color);
+}
